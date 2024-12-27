@@ -235,6 +235,7 @@ color: #FE2C55;
 .Benner_PopularSearch_box {
     margin-bottom: 60px;
     padding-top: 10px;
+    max-width: 586px;
 }
 
 .Benner_Popular_title {
@@ -307,7 +308,7 @@ color: #FE2C55;
 @media (min-width: 400px) and  (max-width: 767px) {
     .inflanar_Benner_box {
         flex-direction: column;
-        align-items: center;
+        align-items: start !important;
         justify-content: center;
 
     }
@@ -470,11 +471,13 @@ color: #FE2C55;
 /*======================================
 here end the Features section
 ========================================*/
-
-
-.Influencer_Tlent_memberBox {
+#Telent{
     margin-top: 120px;
     margin-bottom: 120px;
+}
+
+.Influencer_Tlent_memberBox {
+  
 }
 
 .influencerTlent_card {
@@ -634,12 +637,21 @@ here end the Features section
 
 
 @media (min-width: 992px) {
-    .influencerTlent_card {
-        flex: 1 1 calc(25% - 30px); 
-        max-width: calc(25% - 30px);
-    }
+  
 }
-
+@media (min-width: 768px) and (max-width: 991px) {
+   
+  }
+  
+  /* Positioning for small screens */
+  @media (min-width: 401px) and (max-width: 767px) {
+     
+  }
+  
+  /* Positioning for extra small screens */
+  @media (max-width: 400px) {
+     
+  }
 
 /*======================================
   here start the  Latest Services Mumbere section
