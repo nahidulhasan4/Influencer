@@ -1,13 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Noto+Sans+Display:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
 
+
+@font-face {
+    font-family: 'MyWebFont';
+    src: url('./Agrandir/Agrandir-TextBold.ttf');
+    src: url('./Agrandir/Agrandir-Regular.ttf');
+   
+   
+  }
+  
+  body {
+    font-family: 'MyWebFont', Fallback, sans-serif;
+  }
 /* =====================================
 Template Name: inflanar
 ========================================*/ 
+.container{
+    max-width: 1344px;
+    margin: auto 0;
+}
 a{
  text-decoration: none;
-}
-body{
-    font-family: "Lato", serif;
 }
 
 /*======================================
@@ -33,7 +46,7 @@ color: #FE2C55;
     background-color: #FE2C55;
     color: #ffff;
     border: 1px solid #FE2C55;
-    transition: 0.5s;
+    transition: all 0.3s ease;
 }
 .inflanar-btn__Sign:hover{
     color: #FE2C55;
@@ -51,9 +64,7 @@ color: #FE2C55;
  here start influencer benner section
 ========================================*/
 
-#Benner {
-    margin-top: 50px;
-}
+
 
 .Benner_imgbox {
     position: relative;
@@ -72,6 +83,10 @@ color: #FE2C55;
 
 /* Positioning for large screens */
 @media (min-width: 992px) {
+    
+    #Benner {
+        margin-top: 88px;
+    }
     .shape_img1 {
         right: -30px;
         top: 10%;
@@ -83,7 +98,7 @@ color: #FE2C55;
     }
 
     .shape_img3 {
-        left: 28px;
+        left: 60px;
         bottom: 57px;
     }
 
@@ -117,15 +132,13 @@ color: #FE2C55;
 }
 
 /* Positioning for small screens */
-@media (max-width: 767px) {
+@media (min-width: 401px) and (max-width: 767px) {
     .shape_img1 {
-        right: -10px;
-        top: 5%;
+       display: none;
     }
 
     .shape_img2 {
-        right: -5px;
-        bottom: 15%;
+       display: none;
     }
 
     .shape_img3 {
@@ -134,7 +147,7 @@ color: #FE2C55;
     }
 
     .shape_img4 {
-        top: 30px;
+        top: 35px;
         left: 30px;
     }
 }
@@ -233,6 +246,7 @@ color: #FE2C55;
 
 .Benner_items {
     list-style: none;
+    gap: 10px;
 }
 
 .Pupolar_items {
@@ -267,7 +281,7 @@ color: #FE2C55;
 
 .Benner_client__title {
     font-size: medium;
-    width: 120px;
+    max-width: 130px;
     font-size: 24px;
     font-weight: 700;
 }
@@ -289,13 +303,23 @@ color: #FE2C55;
     }
 }
 
-@media (max-width: 767px) {
+@media (min-width: 400px) and  (max-width: 767px) {
     .inflanar_Benner_box {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-    }
 
+    }
+    .inflanar-sclient{
+        display: flex;
+        flex-direction: column;
+        flex-direction: column-reverse;
+        align-items: start !important;
+        gap: 10px;
+    }
+    .Benenr_client__list {
+        margin-left: 20px;
+    }
     .Benner_img {
         margin-top: 100px;
         max-width: 432px;
@@ -320,6 +344,8 @@ color: #FE2C55;
     }
 }
 
+    
+    
     
     
 /*======================================
@@ -643,9 +669,13 @@ here end the Features section
 
 .Latest_Scard_ImgBox img {
     width: 100% !important;
-    border-radius: 4px;
+    border-radius: 8px !important;
     height: 195px;
 }
+.Latest_Services_card:hover .Latest_Scard_ImgBox img {
+    transform: scale(1.1);
+}
+
 .number_two{
     margin-top: 50px;
 }
@@ -773,9 +803,12 @@ here end the Features section
 
 /* Responsive adjustments for lg devices */
 @media (min-width: 992px) {
+      
+
     .Latest_Scard_ImgBox img {
         height: auto;
     }
+
 }
 
 /* Responsive adjustments for md devices */
@@ -892,17 +925,17 @@ here end the Features section
     top: -36px;
 }
 .ProcessCard_two .Working_ProcessCard_lineImg{
-    left: -119px;
-    bottom: -41px;
+    left: -140px;
+    bottom: -34px;
     
 }
 .ProcessCard_three .Working_ProcessCard_lineImg{
-    top: -36px;
-    left: -160px;
+    top: -34px;
+    left: -130px;
 }
 .ProcessCard_four .Working_ProcessCard_lineImg{
     left: -119px;
-    bottom: -41px;
+    bottom: -34px;
     
 }
 @media (max-width: 991px) {
@@ -953,74 +986,137 @@ here end the Features section
 /*=====================================
   here start the Manage reletionShip section
 ========================================*/ 
-#Manage_reletionShip{
+#Manage_reletionShip {
     padding-top: 120px;
-    background-image: url(img/Shape\ \(1\).png);
+    background-image: url(img/Shape%20%281%29.png);
     background-repeat: no-repeat;
     background-size: cover;
-    padding-bottom: 120px ;
+    padding-bottom: 120px;
 }
-.Manage_reletionShip_ditals{
- margin-bottom: 30px;
+
+.Manage_reletionShip_ditals {
+    margin-bottom: 30px;
 }
-.Manage_ditals_title{
+
+.Manage_ditals_title {
     font-size: 38px;
     font-weight: 700;
     margin-bottom: 20px;
 }
-.Manage_ditals_info{
+
+.Manage_ditals_info {
     font-size: 16px;
-	color: #333333;
+    color: #333333;
     margin-bottom: 20px;
 }
-.Manage_ditals_btn{
+
+.Manage_ditals_btn {
     width: 180px;
-    color: #fff; 
+    color: #fff;
     font-weight: 700;
     border: 1px solid #FE2C55;
     background: #FE2C55;
     padding: 20px 30px;
     border-radius: 10px;
     transition: 0.5s;
- 
- 
 }
-.Manage_ditals_btn:hover{
-  background: #fff;
-  color: #FE2C55;
+
+.Manage_ditals_btn:hover {
+    background: #fff;
+    color: #FE2C55;
 }
-.Manage_reletionShip_ditals .Manage_Dspan{
+
+.Manage_reletionShip_ditals .Manage_Dspan {
     margin-bottom: 40px;
 }
-.Manage_Dspan{
+
+.Manage_Dspan {
     font-size: 16px;
     font-weight: 400;
 }
 
-.Manage_reletionShip_imgbox{
+.Manage_reletionShip_imgbox {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.Manage_mImg{
+.Manage_mImg {
     width: 100%;
-    
 }
-.Vpaly{
+
+.Vpaly {
     background: #fff;
     padding: 30px 30px;
     color: #FE2C55;
     font-size: 25px;
     border-radius: 50%;
+    cursor: pointer;
 }
-.Managered_icon{
+
+.Managered_icon {
     margin-right: 10px;
 }
-.Manage_reletionShip_imgbox img{
+
+.Manage_reletionShip_imgbox img {
     width: 100%;
-	height: 450px;
+    height: 450px;
 }
+
+/* Modal Styles */
+.modal-content {
+    background-color: #fefefe;
+    border: none;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.modal-body {
+    position: relative;
+    padding: 0;
+}
+
+.modal-video-movie-wrap {
+    width: 100%;
+    height: 0;
+    padding-bottom: 56.25%;
+    position: relative;
+}
+
+.modal-video-movie-wrap iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.modal .btn-close {
+    font-size: 24px;
+    color: #000;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    .Manage_reletionShip_ditals {
+        margin-bottom: 30px;
+    }
+
+    .modal-dialog {
+        max-width: 90%;
+    }
+
+    .modal-video-movie-wrap {
+        padding-bottom: 56.25%;
+    }
+}
+
+
 /*=====================================
   here end the  WorkingProcess section
 ========================================*/ 
@@ -1243,79 +1339,6 @@ margin-bottom: 50px;
 /*======================================
    here start the marketing campaign section 
 ========================================*/
-/* #marketing_campaign_saction {
-    margin-bottom: 120px;
-    position: relative;
-    padding-top: 100px;
-    padding-bottom: 120px;
-    overflow: hidden;
-    background-color: #011627; /* Ensure background color matches the footer
-}
-/*
-#marketing_campaign_saction::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50%; /* Set height to 50% of the section 
-    background-image: url("./img/in-footer-bg.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    z-index: 1;
-}
-
-.marketing-campaign-box {
-    z-index: 2;
-    position: relative;
-    background: transparent; /* Ensure transparency *
-    border-radius: 10px;
-}
-
-.marketing-campaign-inner {
-    padding: 50px;
-    z-index: 2;
-    position: relative;
-    background: rgba(0, 0, 0, 0.5); /* Optional: add a slight overlay for better text readability *
-    border-radius: 10px;
-}
-
-.marketing-campaign-img {
-    z-index: 2;
-    position: relative;
-}
-
-.marketing-campaign-title {
-    font-size: 28px;
-    font-weight: 700;
-    max-width: 580px;
-    color: #fff; /* Ensure text color is visible *
-    z-index: 2;
-}
-
-.marketing-campaign-btn {
-    padding: 19px 38px;
-    background: #FE2C55;
-    color: #fff;
-    border-radius: 10px;
-    border: 1px solid #FE2C55;
-    transition: 0.5s;
-    z-index: 2;
-}
-
-.marketing-campaign-btn:hover {
-    background: #fff;
-    color: #FE2C55;
-} */
-
-/*======================================
-   here start the news section 
-========================================*/
-
-
-/*======================================
-   Footer Area
-========================================*/  
  
 #marketing_campaign_saction {
     position: relative;
@@ -1387,6 +1410,16 @@ margin-bottom: 50px;
     background: #fff;
     color: #FE2C55;
 }
+
+
+/*======================================
+   here start the news section 
+========================================*/
+
+
+/*======================================
+   Footer Area
+========================================*/  
 
 /* Footer CSS */
 .footer-top {
@@ -1560,3 +1593,86 @@ margin-bottom: 50px;
         margin-bottom: 5px;
     }
 }
+
+/*======================================
+   Gobal Area
+========================================*/
+
+@keyframes jumpTwo {
+	0% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+
+	40% {
+		-webkit-transform: translate3d(0, 20px, 0);
+		transform: translate3d(0, 40px, 0)
+	}
+
+	100% {
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0)
+	}
+}
+
+
+  @keyframes tpupdown {
+	0% {
+	  -webkit-transform: translateY(0);
+	  -moz-transform: translateY(0);
+	  -ms-transform: translateY(0);
+	  -o-transform: translateY(0);
+	  transform: translateY(0);
+	}
+	100% {
+	  -webkit-transform: translateY(-20px);
+	  -moz-transform: translateY(-20px);
+	  -ms-transform: translateY(-20px);
+	  -o-transform: translateY(-20px);
+	  transform: translateY(-20px);
+	}
+  }
+ 
+  @keyframes rotate2 {
+	from {
+	  transform: rotate(0deg);
+	}
+	to {
+	  transform: rotate(360deg);
+	}
+  }
+  
+  @keyframes moving {
+	0% {
+	  transform: translatey(0px);
+	}
+	20% {
+	  transform: translateX(-50px);
+	}
+	50% {
+	  transform: translatey(-40px);
+	}
+	100% {
+	  transform: translatey(0px);
+	}
+  }
+  
+
+
+  .inflanar-anim-shape1{
+	animation:rotate2 15s linear infinite;
+  }
+  .inflanar-anim-shape2{
+	animation: jumpTwo 4s infinite linear;
+  }
+  .inflanar-anim-shape3{
+	animation: moving 9s linear infinite;
+  }
+  .inflanar-anim-shape4 {
+	animation: tpupdown 0.8s infinite alternate;
+  }
+
+
+/*======================================
+   Gobal Area
+========================================*/  
