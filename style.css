@@ -15,10 +15,9 @@
 /* =====================================
 Template Name: inflanar
 ========================================*/ 
-.container{
-    max-width: 1344px;
-    margin: auto 0;
-}
+ .container{
+    max-width: 1320px;
+ }
 a{
  text-decoration: none;
 }
@@ -291,7 +290,9 @@ color: #FE2C55;
     font-size: 16px;
     font-weight: 400;
 }
-
+.inflanar-sclient{
+    margin-left: 20px;
+}
 @media (min-width: 768px) and (max-width: 991px) {
     .inflanar_benner__title {
         font-size: 48px !important;
@@ -484,6 +485,7 @@ here end the Features section
     background: #FFFFFF;
     box-shadow: 0px 0px 30px 5px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
+    transition: transform 0.3s ease;
     margin: 15px; /* Adds a 30px (15px on each side) gap between cards */
 }
 
@@ -607,7 +609,7 @@ here end the Features section
 }
 
 .card_ViewBtn {
-    margin-top: 80px;
+    margin-top: 40px !important;
     text-align: center;
 }
 
@@ -621,6 +623,7 @@ here end the Features section
     background: #FE2C55;
     border-radius: 10px;
     transition: 0.5s;
+    transition: background-color 0.3s ease;
     border: 2px solid #FE2C55;
 }
 
@@ -1135,15 +1138,17 @@ here end the Features section
     background-size: cover;
     border-radius: 5px;
     display: flex;
-    gap: 20px !important; 
-}
-.card_one{
- padding-bottom: 40px !important;
-}
-.card_two{
-    padding-top: 40px !important;
+    gap: 20px !important;
+    
 }
 
+.card_one {
+    padding-bottom: 40px !important;
+}
+
+.card_two {
+    padding-top: 40px !important;
+}
 
 ._imgBox_card_num {
     margin-left: 10px;
@@ -1164,37 +1169,52 @@ here end the Features section
     padding: 30px 30px;
     background: #fff;
     border-radius: 10px;
-    margin-bottom: 10px; 
-}
-.colabCampony_box{
-    gap: 100px;
-}
-.ColabCompany_BrandIonBox {
-   
-}
-.ColabCompany_BrandIonBox_title{
-font-size: 42px;
-font-weight: 700;
-margin-bottom: 50px;
-}
-.ColabCompany_BrandIonBox_title span{
-    color: #FE2C55 ;
-}
-.ColabCompany_BrandIonBox_Img{
-    margin-bottom: 20px;
-    min-width: 60px;
-	min-height: 60px;
-}
-.ColabCompany_BrandIonBox_Img img{
-    filter: grayscale(100%);
-	opacity: 0.6;
-	transition: 0.5s;
-}
-.ColabCompany_BrandIonBox_Img:hover img{
-    opacity: 1;
-	filter: grayscale(0%);
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+    width: 100%; /* Ensure the cards take full width */
+    box-sizing: border-box;
+    gap: 20px;
 }
 
+.ColabCompany_imgBox_card:hover {
+    transform: translateY(-10px);
+}
+
+.colabCampony_box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+}
+
+.ColabCompany_BrandIonBox {}
+
+.ColabCompany_BrandIonBox_title {
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.ColabCompany_BrandIonBox_title span {
+    color: #FE2C55;
+}
+
+.ColabCompany_BrandIonBox_Img {
+    margin-bottom: 20px;
+    min-width: 60px;
+    min-height: 60px;
+}
+
+.ColabCompany_BrandIonBox_Img img {
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: 0.5s;
+}
+
+.ColabCompany_BrandIonBox_Img:hover img {
+    opacity: 1;
+    filter: grayscale(0%);
+}
 
 /* Responsive adjustments for md devices */
 @media (min-width: 768px) and (max-width: 991px) {
@@ -1206,13 +1226,14 @@ margin-bottom: 50px;
 /* Responsive adjustments for sm devices */
 @media (max-width: 767px) {
     .ColabCompany_imgBox_card {
-        margin-bottom: 20px; 
+        margin-bottom: 20px;
         flex-direction: row;
         text-align: center;
         gap: 10px;
         margin-bottom: 50px !important;
     }
-    .colabCampony_box{
+
+    .colabCampony_box {
         flex-direction: column;
         align-items: center;
         gap: 30px !important;
@@ -1220,6 +1241,53 @@ margin-bottom: 50px;
 
     .ColabCompany_imgBox_card img {
         margin-bottom: 10px;
+    }
+
+    .ColabCompany_imgBox {
+        padding: 30px 15px; /* Adjust padding for smaller screens */
+    }
+
+    .ColabCompany_BrandIonBox_title {
+        font-size: 32px; /* Adjust title size for smaller screens */
+    }
+
+    ._imgBox_cardNUm {
+        font-size: 36px; /* Adjust number size for smaller screens */
+    }
+}
+@media (min-width: 992px) {
+    
+    
+}
+
+/* Positioning for medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .colabCampony_box {
+    display: flex;
+    
+  }
+}
+
+/* Positioning for small screens */
+@media (min-width: 401px) and (max-width: 767px) {
+    .ColabCompany_imgBox   {
+        flex-direction: column !important;
+       }
+        .card_row{
+            display: flex;
+            flex-direction: column !important;
+            width: 100%;
+        }
+}
+
+/* Positioning for extra small screens */
+@media (max-width: 400px) {
+   .ColabCompany_imgBox   {
+    flex-direction: column !important;
+   }
+    .card_row{
+        display: flex;
+        flex-direction: row !important;
     }
 }
 
@@ -1411,7 +1479,40 @@ margin-bottom: 50px;
     color: #FE2C55;
 }
 
+/* Positioning for large screens */
+@media (min-width: 992px) {
+    
+    
+}
 
+/* Positioning for medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+    .marketing-campaign-title{
+        font-size: 28px ;
+    }
+    .marketing-campaign-content{
+        align-items: center !important;
+    }
+    .marketing-campaign-inner{
+        display: flex;
+        flex-direction: column !important;
+    }
+}
+
+/* Positioning for small screens */
+@media (min-width: 401px) and (max-width: 767px) {
+    #marketing_campaign_saction{
+        display: none;
+    }
+}
+
+/* Positioning for extra small screens */
+@media (max-width: 400px) {
+    #marketing_campaign_saction{
+        display: none;
+    }
+   
+}
 /*======================================
    here start the news section 
 ========================================*/
