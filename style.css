@@ -366,6 +366,25 @@ color: #FE2C55;
         margin-bottom: 20px;
         line-height: 38px !important;
     }
+    .Benner_items {
+        gap: 25px;
+        padding-left: 0 !important;
+        flex-wrap: wrap;
+    }
+    .inflanar-sclient{
+        flex-direction: column;
+        align-items: start !important;
+        flex-direction: column-reverse;
+    }
+    .inflanar_Benner_box {
+        flex-direction: column;
+        align-items: start !important;
+        justify-content: center;
+
+    }
+    .Benner_PopularSearch_box{
+        flex-wrap: wrap;
+    }
 }
 
     
