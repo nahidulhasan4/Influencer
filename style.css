@@ -7,6 +7,8 @@
     src: url('./Agrandir/Agrandir-Regular.ttf');
    
   }
+
+  /* global section for website */
   :root {
     scroll-behavior: smooth !important;
 }
@@ -201,6 +203,7 @@ li {
     position: relative;
     transition: all 0.3s ease;
 }
+/* global section */
 /* =====================================
 Template Name: inflanar
 ========================================*/ 
